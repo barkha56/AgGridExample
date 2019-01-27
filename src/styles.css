@@ -1,0 +1,64 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~ag-grid-community/dist/styles/ag-grid.css";
+@import "~ag-grid-community/dist/styles/ag-theme-balham.css";
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+.custom-select {
+  position: relative;
+  font-family: Arial;
+  
+}
+td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    
+  }
+
+  th {
+    height: 50px;
+    vertical-align: bottom;
+    background-color: #f2f2f2;
+  }
+tr:nth-child(even) {background-color: #f2f2f2;}
+.inputstyle
+{
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  color:blue;
+  
+}
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+ 
+}
+
+.btn {
+  text-align: center;
+  border: 2px solid gray;
+  color:white;
+  background-color: blueviolet;
+  padding: 40px 60px;
+  border-radius: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  
+}
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  
+}

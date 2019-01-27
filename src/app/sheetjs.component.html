@@ -1,0 +1,35 @@
+<app-header></app-header>
+	<div class="upload-btn-wrapper">
+  <button style="text-align: center" class="btn" >Import Excel</button>
+	<input type="file" 
+	(change)="onFileChange($event)" multiple="false" />
+	</div>
+	<br><br>
+	<ag-grid-angular 
+	style="width: 900px; height: 420px;"
+    class="ag-theme-balham"
+    [rowData]="rowData" 
+    [columnDefs]="columnDefs"
+    >
+</ag-grid-angular><br><br>
+
+<div>
+        <select  (change)="selectChangeHandler($event)"
+        [(ngModel)]="selected" class="custom-select" style="width:200px;height:40px;">
+        <option [value]="x" *ngFor="let x of items" >{{x}}</option> 
+         </select>
+          <ng-container *ngFor = "let item of testObject | keyvalue "> 
+             <ng-container *ngIf = "selectedValue==item.key"> As: {{item.value}}
+             </ng-container>
+             </ng-container>
+        </div> 
+        <br><br>
+<ag-grid-angular
+style="width: 900px; height: 420px;"
+	class="ag-theme-balham"
+	[rowData]="rowData" 
+	[columnDefs]="newColumnDef"
+	>
+</ag-grid-angular><br><br>
+
+	<app-footer></app-footer>
