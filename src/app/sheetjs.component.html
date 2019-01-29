@@ -1,18 +1,18 @@
-<app-header></app-header>
+
 	<div class="upload-btn-wrapper">
   <button style="text-align: center" class="btn" >Import Excel</button>
 	<input type="file" 
 	(change)="onFileChange($event)" multiple="false" />
 	</div>
 	<br><br>
-	<ag-grid-angular 
+	<ag-grid-angular  *ngIf="columnDefs.length >0"
 	style="width: 900px; height: 420px;"
     class="ag-theme-balham"
     [rowData]="rowData" 
-    [columnDefs]="columnDefs"
-    >
+    [columnDefs]="columnDefs">
 </ag-grid-angular><br><br>
-
+<button class="button-style" (click)="handleClick($event)" type=”button”>Save</button>
+<br><br>
 <div>
         <select  (change)="selectChangeHandler($event)"
         [(ngModel)]="selected" class="custom-select" style="width:200px;height:40px;">
@@ -24,12 +24,10 @@
              </ng-container>
         </div> 
         <br><br>
-<ag-grid-angular
+<ag-grid-angular 
 style="width: 900px; height: 420px;"
 	class="ag-theme-balham"
 	[rowData]="rowData" 
 	[columnDefs]="newColumnDef"
 	>
 </ag-grid-angular><br><br>
-
-	<app-footer></app-footer>

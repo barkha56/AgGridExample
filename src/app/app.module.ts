@@ -5,8 +5,7 @@ import { SheetJSComponent } from './sheetjs.component.';
 import { AgGridModule } from 'ag-grid-angular';
 import { FormsModule } from '@angular/forms';
 import { Component } from '@angular/core';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
+
 
 @Component({
 	selector: 'app-root',
@@ -19,9 +18,7 @@ export class AppComponent {
 @NgModule({
 	declarations: [
 		SheetJSComponent,
-		AppComponent,
-		HeaderComponent,
-		FooterComponent
+		AppComponent
 	],
 	imports: [
         BrowserModule,
